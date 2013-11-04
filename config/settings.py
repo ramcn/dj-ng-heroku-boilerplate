@@ -64,11 +64,22 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Chose path to Angular.js files according to environment
+# ###
+# Develpment SPA
+DEV_SPA = os.path.abspath(os.path.join(BASE_DIR, '..', 'frontend', 'build'))
+# Production SPA
+PROD_SPA = os.path.abspath(os.path.join(BASE_DIR, '..', 'frontend', 'bin'))
+# Chose correct SPA
+SPA_INDEX = DEV_SPA if DEBUG else PROD_SPA
+
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.abspath(os.path.join(BASE_DIR, '..','static')),
+    SPA_INDEX,
 )
 
 # List of finder classes that know how to find static files in
@@ -104,22 +115,13 @@ ROOT_URLCONF = 'config.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'config.wsgi.application'
 
-# Chose template path to Angular.js index.html according to environment
-# ###
-# Develpment SPA
-DEV_SPA = os.path.abspath(os.path.join(BASE_DIR, '..', 'frontend', 'build'))
-# Production SPA
-PROD_SPA = os.path.abspath(os.path.join(BASE_DIR, '..', 'frontend', 'bin'))
-# Chose correct SPA
-SPA_INDEX_HTML = DEV_SPA if DEBUG else PROD_SPA
-
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or
     # "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 
-    SPA_INDEX_HTML,
+    SPA_INDEX,
 
 )
 
