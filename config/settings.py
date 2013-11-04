@@ -1,6 +1,8 @@
+import os
+
 # Django settings for config project.
 
-DEBUG = True
+DEBUG = bool(os.environ.get('DEBUG', False))
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -10,7 +12,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+DATABASES = dj_database_url.config()
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = ['*']
@@ -61,13 +63,12 @@ STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__files__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(BASE_DIR, 'static'),
+    os.path.abspath(os.path.join(BASE_DIR, '..','static')),
 )
 
 # List of finder classes that know how to find static files in
@@ -103,11 +104,23 @@ ROOT_URLCONF = 'config.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'config.wsgi.application'
 
+# Chose template path to Angular.js index.html according to environment
+# ###
+# Develpment SPA
+DEV_SPA = os.path.abspath(os.path.join(BASE_DIR, '..', 'frontend', 'build'))
+# Production SPA
+PROD_SPA = os.path.abspath(os.path.join(BASE_DIR, '..', 'frontend', 'bin'))
+# Chose correct SPA
+SPA_INDEX_HTML = DEV_SPA if DEBUG else PROD_SPA
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or
     # "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+
+    SPA_INDEX_HTML,
+
 )
 
 INSTALLED_APPS = (
