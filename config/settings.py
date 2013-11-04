@@ -134,13 +134,16 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
+    #
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'South',
-    'dj-database-url',
-    'djangorestframework',
-    'dj-static',
-    'django-extensions'
+    #
+    # Database schemas and schema migration
+    'south',
+    # Framework for generating REST endpoints
+    'rest_framework',
+    # Extended management commands
+    'django_extensions'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
