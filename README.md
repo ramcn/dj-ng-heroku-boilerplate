@@ -40,7 +40,7 @@ This assumes your system meets all the above prerequisites.
 * Add the following to your `~/virtualenvs/<YOURENVIRONMENT>/bin/postactivate`
   file
 
-```sh
+```shell
 export DEBUG="True"
 export DATABASE_URL="postgres://<USERNAME>:<PASSWORD>@<DATABASE_SERVER_NAME>/<DATABASE_NAME>"
 ```
@@ -51,7 +51,7 @@ Example DATABASE_URL: `postgres://john:secret@localhost/django_db`
   `cd <YOU PROJECT DIRECTORY> && pip install -r requirements.txt`
 * Change into the frontend directory and install dependencies:
 
-```sh
+```shell
 $ cd frontend
 $ npm -g install grunt-cli karma bower
 $ npm install
@@ -66,7 +66,7 @@ Open a terminal, go to your `frontend` directory and run `grunt watch`. The
 build process should start and finish without errors and the terminal should
 show:
 
-```sh
+```shell
 Running "karma:unit" (karma) task
 
 Running "delta" task
@@ -76,7 +76,7 @@ Waiting...
 Open another terminal and go to your project root directory and run
 `foreman start`. Which should give you an output like this:
 
-```sh
+```shell
 15:33 $ foreman start
 15:34:00 web.1  | started with pid 1170
 15:34:00 web.1  | 2013-11-04 15:34:00 [1173] [INFO] Starting gunicorn 18.0
