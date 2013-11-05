@@ -69,7 +69,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Chose path to Angular.js files according to environment
 # ###
-# Develpment SPA
+# Development SPA
 DEV_SPA = os.path.abspath(os.path.join(BASE_DIR, '..', 'frontend', 'build'))
 # Production SPA
 PROD_SPA = os.path.abspath(os.path.join(BASE_DIR, '..', 'frontend', 'bin'))
