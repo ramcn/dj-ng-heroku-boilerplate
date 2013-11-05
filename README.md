@@ -68,6 +68,8 @@ Example DATABASE_URL: `postgres://john:secret@localhost/django_db`
 
 * Change into your project directory and install pip dependencies:
   `cd <YOU PROJECT DIRECTORY> && pip install -r requirements.txt`
+* Setup your database tables and superuser by issueing:
+  `python manage.py syncdb`.
 * Change into the frontend directory and install dependencies:
 
 ```shell
