@@ -117,10 +117,10 @@ Your Django dependencies are stored in `requirements.txt`. When you install
 additional applications in your virtual Python, make sure to update your
 `requirements.txt` with `pip freeze > requirements.txt`.
 
-This configurations assumes Python 2.7.4 because that is the latest non 3.x
+This configuration assumes Python 2.7.4 because that is the latest non 3.x
 version supported by Heroku. If you decide to change to a different Python
 version make sure to update your `runtime.txt` accordingly. The contents of
-file has no effect on your local development environment whatsoever.
+the file has no effect on your local development environment whatsoever.
 
 All the real magic happens in three directories, `backend`, `config` and
 `frontend`.
