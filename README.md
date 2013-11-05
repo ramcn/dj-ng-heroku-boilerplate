@@ -11,15 +11,16 @@ A Boilerplate which sets up a basic starter for a
 [Django REST Framework](http://django-rest-framework.org/) backed REST API.
 
 ## What's inside
+
 Django-Angular-Boilerplate integrates the excellent
 [ng-boilerplate](http://joshdmiller.github.io/ng-boilerplate/#/home) project
-for it's frontend part. The backend part is built on Django,
-Django-REST-Framework and a few utility apps which make Django development
-easier.
+for its frontend part. The backend part is built on
+[Django](http://www.djangoproject.com), Django-REST-Framework and a few utility
+apps which make Django development easier.
 
 List of installed Django apps:
 
-* [Django Toolbelt] (includes [Django](http://www.djangoproject.com),
+* [Django Toolbelt](includes [Django](http://www.djangoproject.com),
   [psycopg2](https://pypi.python.org/pypi/psycopg2),
   [gunicorn](https://pypi.python.org/pypi/gunicorn),
   [dj-database-url](https://github.com/kennethreitz/dj-database-url)
