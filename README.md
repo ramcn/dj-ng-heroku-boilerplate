@@ -2,7 +2,7 @@
 incomplete. There's no license yet. I will remove this notice, when I think the
 project is ready.
 
-# Django-Angular-Boilerplate
+# Django-Angular-Heorku-Boilerplate
 
 A Boilerplate which sets up a basic starter for a
 [Heroku](https://www.heroku.com/) deployable
@@ -14,7 +14,7 @@ A Boilerplate which sets up a basic starter for a
 
 Django-Angular-Boilerplate integrates the excellent
 [ng-boilerplate](http://joshdmiller.github.io/ng-boilerplate/#/home) project
-for its frontend part. The backend part is built on
+for its frontend part (plus a few tweaks). The backend part is built on
 [Django](http://www.djangoproject.com), Django-REST-Framework and a few utility
 apps which make Django development easier.
 
@@ -148,3 +148,15 @@ and CSS files for easier debugging.
 When `DEBUG="False"` or if `DEBUG` is not set at all Django will serve the
 compiled, compressed, concatenated JavaScript and CSS files for faster page
 loading.
+
+## Django tweaks for Angular.js
+There's a small tweak in `app.js` which enables CSRF compatibility with
+Django. It uses the ngCookies module and is preinstalled and -configured. Read
+[Willie Sana' great blog post](http://angularjs-best-practices.blogspot.de/2013/07/angularjs-and-xsrfcsrf-cross-site.html)
+about the topic if you want to know more.
+
+Also there's django-angular-rest-resource, a bower installable package which
+helps Django-REST-Framework and Angular.js to play nicely togther. Basically it
+is a clone of ngResource which allows trailing `/` in resource URLs and
+pagination of `isArray` methods like `.query()`.
+[More information about the module at Github](https://github.com/blacklocus/angular-django-rest-resource).
