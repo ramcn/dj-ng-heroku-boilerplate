@@ -4,14 +4,17 @@ angular.module( 'ngBoilerplate', [
   'ngBoilerplate.home',
   'ngBoilerplate.about',
   'ui.state',
-  'ui.route'
+  'ui.route',
+  'ngCookies'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
   $urlRouterProvider.otherwise( '/home' );
 })
 
-.run( function run () {
+.run( function run ($http, $cookies) {
+  // For CSRF token compatibility with Django
+  $http.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
 })
 
 .controller( 'AppCtrl', function AppCtrl ( $scope ) {
