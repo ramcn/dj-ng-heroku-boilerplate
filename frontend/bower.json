@@ -6,10 +6,13 @@
     "angular-mocks": "~1.0.7",
     "bootstrap": "~2.3.2",
     "angular-bootstrap": "~0.3.0",
-    "angular-ui-router": "~0.0.1",
-    "angular-ui-utils": "~0.0.3",
+    "angular-ui-router": "~0.2.0",
+    "angular-ui-utils": "~0.0.4",
     "angular-django-rest-resource": "*",
     "angular-cookies": "~1.2.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "resolutions": {
+    "angular": "~1.0.7"
+  }
 }
