@@ -2,7 +2,7 @@
 incomplete. There's no license yet. I will remove this notice, when I think the
 project is ready.
 
-# Django-Angular-Heorku-Boilerplate
+# Django-Angular-Heroku-Boilerplate
 
 A Boilerplate which sets up a basic starter for a
 [Heroku](https://www.heroku.com/) deployable
@@ -20,7 +20,8 @@ apps which make Django development easier.
 
 List of installed Django apps:
 
-* [Django Toolbelt](includes [Django](http://www.djangoproject.com),
+* [Django Toolbelt](https://pypi.python.org/pypi/django-toolbelt)
+  (includes [Django](http://www.djangoproject.com),
   [psycopg2](https://pypi.python.org/pypi/psycopg2),
   [gunicorn](https://pypi.python.org/pypi/gunicorn),
   [dj-database-url](https://github.com/kennethreitz/dj-database-url)
