@@ -1,7 +1,3 @@
-**Notice:** This project is still in the making. The documentation is
-incomplete. There's no license yet. I will remove this notice, when I think the
-project is ready.
-
 # Django-Angular-Heroku-Boilerplate
 
 A Boilerplate which sets up a basic starter for a
