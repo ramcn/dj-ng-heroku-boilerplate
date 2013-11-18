@@ -50,8 +50,9 @@ satisfy most of the requirements anyway.
 This assumes your system meets all the above prerequisites.
 
 * Create a new virtual python environment `mkvirtualenv <YOUR_ENVIRONEMENT>`
-* Configure your PostgreSql database and note down your database name, username
-  and password.
+* Configure your PostgreSql database like described in
+  [this Ubuntu guide](https://help.ubuntu.com/community/PostgreSQL) and note
+  down your database name, username and password.
 * Clone the repository `git clone <URL>`
 * Add the following to your `~/virtualenvs/<YOURENVIRONMENT>/bin/postactivate`
   file
