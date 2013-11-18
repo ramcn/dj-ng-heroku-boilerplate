@@ -1,7 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-
 def home(request, template_name="index.html"):
     """
     The index view which serves the Angular.js SPA. The path to the correct
