@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcut import render_to_response
 from django.template import RequestContext
 
 def home(request, template_name="index.html"):

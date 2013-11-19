@@ -62,7 +62,7 @@ export DEBUG="True"
 export DATABASE_URL="postgres://<USERNAME>:<PASSWORD>@<DATABASE_SERVER_NAME>/<DATABASE_NAME>"
 ```
 
-Example DATABASE_URL: `postgres://john:secret@localhost/django_db`
+Example DATABASE\_URL: ´postgres://john:secret@localhost/django_db´
 
 * Change into your project directory and install pip dependencies:
   `cd <YOU PROJECT DIRECTORY> && pip install -r requirements.txt`
