@@ -1,3 +1,4 @@
+/* global angular */
 angular.module( 'ngBoilerplate', [
   'templates-app',
   'templates-common',
@@ -8,6 +9,11 @@ angular.module( 'ngBoilerplate', [
   'ngCookies'
 ])
 
+/**
+ * This configures the root route
+ * @param  {Object} $stateProvider     The state provider
+ * @param  {Object} $urlRouterProvider The URL provider
+ */
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
   $urlRouterProvider.otherwise( '/home' );
 })
