@@ -10,5 +10,4 @@ pip-log.txt
 
 # Translations
 *.mo
-#
-###############################
+/frontend/.tern-project
