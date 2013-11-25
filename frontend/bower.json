@@ -10,7 +10,6 @@
     "angular-ui-utils": "~0.0.4",
     "angular-django-rest-resource": "*",
     "angular-cookies": "~1.2.0",
-    "placeholders": "~3.0.1",
     "angular-placeholders": "*"
   },
   "dependencies": {},
