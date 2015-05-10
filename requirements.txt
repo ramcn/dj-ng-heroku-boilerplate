@@ -7,3 +7,4 @@ djangorestframework==2.3.8
 gunicorn==18.0
 psycopg2==2.5.1
 six==1.4.1
+south==0.7.3

@@ -145,7 +145,8 @@ INSTALLED_APPS = (
     # Framework for generating REST endpoints
     'rest_framework',
     # Extended management commands
-    'django_extensions'
+    'django_extensions',
+    'south'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
